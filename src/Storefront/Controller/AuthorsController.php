@@ -22,10 +22,6 @@ class AuthorsController extends StorefrontController
 {
     private EntityRepositoryInterface $productRepository;
 
-    /**
-     * AuthorsController constructor.
-     * @param EntityRepositoryInterface $productRepository
-     */
     public function __construct(EntityRepositoryInterface $productRepository)
     {
         $this->productRepository = $productRepository;
@@ -33,7 +29,8 @@ class AuthorsController extends StorefrontController
 
     /**
      * @Since("6.4.0.0")
-     * @Route("/authors", name="frontend.swag-training-authors.authors", methods={"GET"}, defaults={"XmlHttpRequest"=true})
+     * @Route("/authors", name="frontend.swag-training.authors", methods={"GET"},
+     *                    defaults={"XmlHttpRequest"=true})
      */
     public function getData(Request $request, Context $context): Response
     {
@@ -43,8 +40,10 @@ class AuthorsController extends StorefrontController
         $criteria->setLimit(3);
 
         $products = $this->productRepository->search($criteria, $context);
-        return $this->renderStorefront('@SwagTrainingAuthorsStorefront/storefront/page/content/authors.html.twig', [
-            'products' => $products
+
+        return $this->renderStorefront(
+            '@SwagTrainingAuthorsStorefront/storefront/page/content/authors.html.twig', [
+            'products' => $products,
         ]);
     }
 }
