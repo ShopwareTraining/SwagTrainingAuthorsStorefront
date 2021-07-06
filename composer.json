@@ -1,0 +1,17 @@
+{
+    "name": "swag-training/authors-storefront",
+    "description": "Authors storefront",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SwagTraining\\AuthorsStorefront\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "SwagTraining\\AuthorsStorefront\\SwagTrainingAuthorsStorefront",
+        "label": {
+            "en-GB": "Authors storefront"
+        }
+    }
+}
