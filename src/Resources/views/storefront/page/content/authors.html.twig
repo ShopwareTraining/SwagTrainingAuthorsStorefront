@@ -2,10 +2,10 @@
 
 {% block page_content %}
     <div class="container">
-        <h1>Listing of products</h1>
+        <h1>Listing of authors</h1>
         <ol>
-        {% for product in products %}
-            <li>{{ product.translated.name }}</li>
+        {% for author in authors %}
+            <li>{{ author.name }}</li>
         {% endfor %}
         </ol>
         {{ dump() }}

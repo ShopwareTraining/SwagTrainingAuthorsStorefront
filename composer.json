@@ -1,5 +1,5 @@
 {
-    "name": "swag-training/shopware6-authors-storefront",
+    "name": "swag-training/authors-storefront",
     "description": "Authors storefront",
     "type": "shopware-platform-plugin",
     "license": "MIT",

@@ -11,8 +11,9 @@
             <!-- <call method="setTwig">
                 <argument type="service" id="twig"/>
             </call> -->
-            
-            <argument type="service" id="product.repository"/>
+
+            <!-- argument type="service" id="product.repository"/ -->
+            <argument type="service" id="author.repository"/>
         </service>
     </services>
 </container>
