@@ -15,5 +15,8 @@
             <!-- argument type="service" id="product.repository"/ -->
             <argument type="service" id="author.repository"/>
         </service>
+
+        <prototype namespace="SwagTraining\AuthorsStorefront\Storefront" resource="../Storefront/">
+        </prototype>
     </services>
 </container>

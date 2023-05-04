@@ -23,7 +23,9 @@ class AuthorsController extends StorefrontController
      * AuthorsController constructor.
      * @param EntityRepositoryInterface $authorRepository
      */
-    public function __construct(EntityRepositoryInterface $authorRepository)
+    public function __construct(
+        EntityRepositoryInterface $authorRepository
+    )
     {
         $this->authorRepository = $authorRepository;
     }
